@@ -25,7 +25,7 @@ class HashTable:
         
         while self.arr[hash_index] != new_str:
             if self.arr[hash_index] == 0:
-                return false
+                return False
             hash_index = (hash_index + 1) % 9
         return self.arr[hash_index] == new_str
         
@@ -34,8 +34,6 @@ class HashTable:
         hash_index = self.hash(new_str)
         
         while self.arr[hash_index] != new_str:
-            if self.arr[hash_index] == 0:
-                return
             hash_index = (hash_index + 1) % 9
         if self.arr[hash_index] == new_str:
             self.arr[hash_index] = 0;
