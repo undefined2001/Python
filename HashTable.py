@@ -32,11 +32,10 @@ class HashTable:
         
     def delete(self, new_str):
         hash_index = self.hash(new_str)
-        
         while self.arr[hash_index] != new_str:
             hash_index = (hash_index + 1) % 9
-        if self.arr[hash_index] == new_str:
-            self.arr[hash_index] = 0;
+            
+        self.arr[hash_index] = 0;
             
         
 
